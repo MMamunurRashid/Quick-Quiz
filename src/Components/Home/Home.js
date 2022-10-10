@@ -4,13 +4,13 @@ import Header from "../Header/Header";
 import Quizzes from "../Quizzes/Quizzes";
 
 const Home = () => {
-  const quizzesData = useLoaderData();
-  const quizzes = quizzesData.data;
+  const { data } = useLoaderData();
+
   return (
     <div>
       <Header></Header>
-      <div className="grid md:grid-cols-3 w-4/5 m-auto ">
-        {quizzes.map((quiz) => (
+      <div className="grid md:grid-cols-3 md:w-4/5 sm:w-11/12 m-auto ">
+        {data.map((quiz) => (
           <Quizzes key={quiz.id} quiz={quiz}></Quizzes>
         ))}
       </div>
