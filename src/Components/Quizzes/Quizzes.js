@@ -1,9 +1,10 @@
 import React from "react";
+import { Button, Card } from "react-daisyui";
 import { Link } from "react-router-dom";
 
 const Quizzes = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
-
+  console.log(name);
   return (
     <div className="m-10 bg-slate-400">
       <img className="w-1/5" src={logo} alt="" />
