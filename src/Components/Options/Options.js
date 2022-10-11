@@ -1,15 +1,14 @@
 import React from "react";
-import { Form, Radio } from "react-daisyui";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
 
 const Options = ({ option, correctAnswer, idx }) => {
   //   console.log(correctAnswer);
+
   const handleClick = (clickedOption) => {
-    console.log(clickedOption);
     if (clickedOption.option === correctAnswer) {
-      toast("Wow so easy!");
+      toast("Wow Good Job!!!");
       Swal.fire({
         position: "center",
         icon: "success",
@@ -18,7 +17,7 @@ const Options = ({ option, correctAnswer, idx }) => {
         timer: 1500,
       });
     } else {
-      toast("Wrong!");
+      toast("Wrong Answer!");
       Swal.fire({
         icon: "error",
         title: "Oops Wrong Answer!!",
@@ -28,9 +27,9 @@ const Options = ({ option, correctAnswer, idx }) => {
     }
   };
   return (
-    <div className=" border rounded-lg bg-slate-700 shadow-2xl shadow-indigo-800">
+    <div className="border rounded-lg bg-slate-700 hover:bg-blue-600 shadow-2xl shadow-indigo-800 pt-5 pb-5 px-5">
       <div
-        className="text-white text-xl"
+        className="text-white text-xl "
         onClick={() => handleClick({ option })}
       >
         <input type="radio" name="option" id={option} value={option} />

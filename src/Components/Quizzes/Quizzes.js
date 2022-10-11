@@ -6,14 +6,14 @@ const Quizzes = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
   console.log(name);
   return (
-    <div className="m-10 bg-slate-400">
-      <img className="w-1/5" src={logo} alt="" />
+    <div className="m-3 p-3 bg-slate-700 rounded-xl text-center">
+      <img className="w-3/5 m-auto" src={logo} alt="" />
 
       <h1 className="text-2xl">{name}</h1>
-      <h2>No of Quiz : {total}</h2>
+      <h2 className="text-lg mb-5">No of Quiz : {total}</h2>
 
       <Link to={`/quiz/${id}`}>
-        <small className=" mt-5 mb-2 border-0 bg-indigo-600 hover:bg-indigo-300 active:bg-red-500 text-white font-semibold rounded-xl px-12 py-1">
+        <small className="text-xl  border-0 bg-indigo-600 hover:bg-indigo-300 active:bg-red-500 text-white font-semibold rounded-xl px-12 py-1">
           Start Quiz
         </small>
       </Link>
