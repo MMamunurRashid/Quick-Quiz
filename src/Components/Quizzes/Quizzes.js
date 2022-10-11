@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Card } from "react-daisyui";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 const Quizzes = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
   console.log(name);
