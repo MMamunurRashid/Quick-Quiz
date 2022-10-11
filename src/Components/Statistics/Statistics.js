@@ -1,7 +1,33 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
+
+import {
+  Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 const Statistics = () => {
-  return <div>Statistics</div>;
+  const { data } = useLoaderData();
+
+  console.log(data);
+
+  return (
+    <div className=" bg-white">
+      <LineChart width={300} height={500} data={data}>
+        <Line type="monotone" dataKey="total" stroke="#82ca9d"></Line>
+
+        <XAxis dataKey="name"></XAxis>
+        <YAxis></YAxis>
+        <Tooltip></Tooltip>
+      </LineChart>
+      <Legend></Legend>
+    </div>
+  );
 };
 
 export default Statistics;

@@ -5,16 +5,11 @@ import Swal from "sweetalert2";
 const EachQuiz = ({ eachQuiz, idx }) => {
   const { question, id, options, correctAnswer } = eachQuiz;
 
-  let ques = "";
-  for (let i = 3; i < question.length - 4; i++) {
-    ques = ques + question[i];
-  }
-
   return (
     <div className=" bg-slate-500 border m-10 pt-10 pb-10 rounded-2xl shadow-2xl shadow-indigo-800 border-yellow-100">
-      <div className="flex md:w-4/5 m-auto justify-between items-center">
+      <div className="md:flex md:w-4/5 m-auto justify-between items-center">
         <p className="text-3xl  text-center md:w-4/5 m-auto ">
-          Quiz {idx + 1} : {ques}
+          Quiz {idx + 1} : {question.slice(3, -4)}
         </p>
         <EyeIcon
           onClick={() => {
@@ -25,11 +20,11 @@ const EachQuiz = ({ eachQuiz, idx }) => {
               showConfirmButton: true,
             });
           }}
-          className="h-6 w-6"
+          className="h-6 w-6 m-auto mt-3"
         ></EyeIcon>
       </div>
 
-      <div className="grid md:grid-cols-2 w-4/5 shadow-2xl shadow-indigo-800 m-auto gap-3 pt-5">
+      <div className="grid md:grid-cols-2 md:w-4/5 w-11/12 shadow-2xl shadow-indigo-800 m-auto gap-3 pt-5">
         {options.map((option, idx) => (
           <Options
             key={idx}

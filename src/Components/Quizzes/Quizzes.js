@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 const Quizzes = ({ quiz }) => {
   const { id, name, logo, total } = quiz;
-  console.log(name);
+
   return (
     <div className="m-3 p-3 bg-slate-700 rounded-xl text-center">
-      <img className="w-3/5 m-auto" src={logo} alt="" />
+      <img className="md:w-3/5 m-auto" src={logo} alt="" />
 
       <h1 className="text-2xl">{name}</h1>
       <h2 className="text-lg mb-5">No of Quiz : {total}</h2>
