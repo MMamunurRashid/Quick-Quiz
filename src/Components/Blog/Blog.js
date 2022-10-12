@@ -6,7 +6,7 @@ const Blog = () => {
       <div className="pb-20">
         <div className="mt-10 p-5 rounded-xl bg-slate-700">
           <h1 className="text-3xl text-center font-mono">
-            Blog-1: What is Purpose of React Router
+            Blog-1: What is Purpose of React Router.
           </h1>
           <p className="text-xl mt-5 font-sans">
             <strong> Routing</strong> is a process in which a user is directed
