@@ -8,7 +8,16 @@ const Options = ({ option, correctAnswer, idx }) => {
 
   const handleClick = (clickedOption) => {
     if (clickedOption.option === correctAnswer) {
-      toast("Wow Good Job!!!");
+      toast(" Wow,Good Job", {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       Swal.fire({
         position: "center",
         icon: "success",
@@ -17,7 +26,16 @@ const Options = ({ option, correctAnswer, idx }) => {
         timer: 1500,
       });
     } else {
-      toast("Wrong Answer!");
+      toast("Wrong Answer!!", {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       Swal.fire({
         icon: "error",
         title: "Oops Wrong Answer!!",
@@ -28,12 +46,13 @@ const Options = ({ option, correctAnswer, idx }) => {
   };
   return (
     <div className="border rounded-lg bg-slate-700 hover:bg-blue-600 shadow-2xl shadow-indigo-800 pt-5 pb-5 px-5">
-      <div
-        className="text-white text-xl "
-        onClick={() => handleClick({ option })}
-      >
+      <div className="text-white sm:text-xl text-lg">
         <input type="radio" name="option" id={option} value={option} />
-        <label htmlFor={option} className="pl-3">
+        <label
+          onClick={() => handleClick({ option })}
+          htmlFor={option}
+          className="pl-3 hover:cursor-pointer"
+        >
           {option}
         </label>
       </div>

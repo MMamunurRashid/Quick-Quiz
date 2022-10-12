@@ -6,6 +6,7 @@ import Home from "./Components/Home/Home";
 import Statistics from "./Components/Statistics/Statistics";
 import Blog from "./Components/Blog/Blog";
 import Quiz from "./Components/Quiz/Quiz";
+import NotFound from "./Components/NotFound/NotFound";
 
 function App() {
   const router = createBrowserRouter([
@@ -41,6 +42,7 @@ function App() {
           path: "/blog",
           element: <Blog></Blog>,
         },
+        { path: "*", element: <NotFound></NotFound> },
       ],
     },
   ]);

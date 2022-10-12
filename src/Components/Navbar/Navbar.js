@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link className="pl-5 text-xl" to={"/blog"}>
               Blog
             </Link>
-            <Link className="pl-5 text-xl" to={""}>
+            <Link className="pl-5 text-xl" to={"*"}>
               About
             </Link>
           </div>
