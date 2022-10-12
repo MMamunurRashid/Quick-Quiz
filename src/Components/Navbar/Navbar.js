@@ -10,7 +10,7 @@ const Navbar = () => {
         <div>
           <div
             onClick={() => setMenuOpen(!menuOpen)}
-            className="h-6 w-6 md:hidden "
+            className="h-8 w-8 ml-2 md:hidden "
           >
             {menuOpen ? <XMarkIcon /> : <Bars3Icon />}
           </div>
@@ -18,14 +18,14 @@ const Navbar = () => {
 
         <div className="flex justify-between items-center py-2 bg-slate-800 text-white">
           <div>
-            <h1 className="text-5xl font-serif text-orange-500 font-bold">
+            <h1 className="text-5xl pl-3 font-serif text-orange-500 font-bold">
               Quick Quiz
             </h1>
           </div>
 
           <div
             className={`bg-slate-800    md:text-lg text-white  md:flex justify-center absolute md:static duration-500 ease-in ${
-              menuOpen ? "top-8 pb-10" : "top-[-120px]"
+              menuOpen ? "top-10 pb-10" : "top-[-120px]"
             }`}
           >
             <Link
