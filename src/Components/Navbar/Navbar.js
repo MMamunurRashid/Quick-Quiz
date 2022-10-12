@@ -10,7 +10,7 @@ const Navbar = () => {
         <div>
           <div
             onClick={() => setMenuOpen(!menuOpen)}
-            className="h-8 w-8 ml-2 md:hidden "
+            className="h-8 w-8 ml-2 absolute top-6 right-2  md:hidden "
           >
             {menuOpen ? <XMarkIcon /> : <Bars3Icon />}
           </div>
@@ -25,28 +25,28 @@ const Navbar = () => {
 
           <div
             className={`bg-slate-800    md:text-lg text-white  md:flex justify-center absolute md:static duration-500 ease-in ${
-              menuOpen ? "top-10 pb-10" : "top-[-120px]"
+              menuOpen ? "top-3 pb-6 pt-3" : "top-[-120px]"
             }`}
           >
             <Link
-              className="pl-5 text-xl font-serif font-semibold"
+              className="pr-3 pl-2 text-xl font-serif font-semibold"
               to={"/home"}
             >
               Home
             </Link>
             <Link
-              className="pl-5 text-xl font-serif font-semibold"
+              className="pr-4 text-xl font-serif font-semibold"
               to={"/statistics"}
             >
               Statistics
             </Link>
             <Link
-              className="pl-5 text-xl font-serif font-semibold"
+              className="pr-4 text-xl font-serif font-semibold"
               to={"/blog"}
             >
               Blog
             </Link>
-            <Link className="pl-5 text-xl font-serif font-semibold" to={"*"}>
+            <Link className="pr-4 text-xl font-serif font-semibold" to={"*"}>
               About
             </Link>
           </div>
