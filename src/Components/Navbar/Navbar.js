@@ -18,24 +18,35 @@ const Navbar = () => {
 
         <div className="flex justify-between items-center py-2 bg-slate-800 text-white">
           <div>
-            <h1 className="text-4xl">Quick Quiz</h1>
+            <h1 className="text-5xl font-serif text-orange-500 font-bold">
+              Quick Quiz
+            </h1>
           </div>
 
           <div
-            className={`bg-slate-800 w-1/2   md:text-lg text-white  md:flex justify-center absolute md:static duration-500 ease-in ${
-              menuOpen ? "top-10 pb-3" : "top-[-120px]"
+            className={`bg-slate-800    md:text-lg text-white  md:flex justify-center absolute md:static duration-500 ease-in ${
+              menuOpen ? "top-8 pb-10" : "top-[-120px]"
             }`}
           >
-            <Link className="pl-5 text-xl" to={"/home"}>
+            <Link
+              className="pl-5 text-xl font-serif font-semibold"
+              to={"/home"}
+            >
               Home
             </Link>
-            <Link className="pl-5 text-xl" to={"/statistics"}>
+            <Link
+              className="pl-5 text-xl font-serif font-semibold"
+              to={"/statistics"}
+            >
               Statistics
             </Link>
-            <Link className="pl-5 text-xl" to={"/blog"}>
+            <Link
+              className="pl-5 text-xl font-serif font-semibold"
+              to={"/blog"}
+            >
               Blog
             </Link>
-            <Link className="pl-5 text-xl" to={"*"}>
+            <Link className="pl-5 text-xl font-serif font-semibold" to={"*"}>
               About
             </Link>
           </div>

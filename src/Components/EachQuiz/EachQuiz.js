@@ -25,7 +25,7 @@ const EachQuiz = ({ eachQuiz, idx }) => {
         ></EyeIcon>
       </div>
 
-      <div className="grid md:grid-cols-2 md:w-4/5 w-11/12 shadow-2xl shadow-indigo-800 m-auto gap-3 pt-5">
+      <div className="grid md:grid-cols-2 lg:w-4/5 w-11/12 shadow-2xl shadow-indigo-800 m-auto gap-3 pt-5">
         {options.map((option, idx) => (
           <Options
             key={idx}

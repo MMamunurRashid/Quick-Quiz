@@ -11,10 +11,10 @@ const Header = () => {
         />
       </div>
       <div className="sm:ml-8 text-center">
-        <h1 className="lg:text-5xl md:text-3xl text-2xl mb-10">
+        <h1 className="lg:text-5xl md:text-3xl text-2xl font-mono mb-10">
           Welcome to Quick Quiz
         </h1>
-        <h3 className="lg:text-3xl md:text-2xl text-xl mb-5">
+        <h3 className="lg:text-3xl md:text-2xl text-xl mb-5 font-serif">
           Get Ready For Quiz?
         </h3>
         <p className="text-lg">

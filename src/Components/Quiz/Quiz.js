@@ -8,9 +8,11 @@ const Quiz = () => {
   const questions = data.questions;
 
   return (
-    <div className="md:w-9/12 m-auto pb-20">
+    <div className="lg:w-9/12 m-auto pb-20">
       <ToastContainer></ToastContainer>
-      <h1 className="text-4xl text-center mt-8">Quiz of {data.name}</h1>
+      <h1 className="text-4xl text-center mt-8 font-mono font-semibold">
+        Quiz of {data.name}
+      </h1>
       {questions.map((eachQuiz, idx) => (
         <EachQuiz key={eachQuiz.id} eachQuiz={eachQuiz} idx={idx}></EachQuiz>
       ))}

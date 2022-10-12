@@ -18,7 +18,7 @@ const Statistics = () => {
 
   return (
     <div className="bg-white ">
-      <h1 className="text-center text-black text-4xl pt-20 pb-10">
+      <h1 className="text-center text-black text-4xl pt-20 pb-10 font-mono font-semibold">
         Line Chart for Total number of Quiz question
       </h1>
       <ResponsiveContainer width="100%" height={400}>
