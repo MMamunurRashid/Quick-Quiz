@@ -17,15 +17,20 @@ const Statistics = () => {
   console.log(data);
 
   return (
-    <div className=" bg-white">
-      <LineChart width={300} height={500} data={data}>
-        <Line type="monotone" dataKey="total" stroke="#82ca9d"></Line>
+    <div className="bg-white ">
+      <h1 className="text-center text-black text-4xl pt-20 pb-10">
+        Line Chart for Total number of Quiz question
+      </h1>
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart width={500} height={500} data={data}>
+          <Line type="monotone" dataKey="total" stroke="#82ca9d"></Line>
 
-        <XAxis dataKey="name"></XAxis>
-        <YAxis></YAxis>
-        <Tooltip></Tooltip>
-      </LineChart>
-      <Legend></Legend>
+          <XAxis dataKey="name"></XAxis>
+          <YAxis></YAxis>
+          <Tooltip></Tooltip>
+          <Legend></Legend>
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
