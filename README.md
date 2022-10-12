@@ -2,7 +2,7 @@
 
 This the platform where you can attend for quiz to check your understanding of knowledge about Web development. Here so many quizzes about JavScript, React, CSS, and GitHub.
 
-Live site link: https://app.netlify.com/sites/luminous-halva-87e3ac/overview
+Live site link: https://luminous-halva-87e3ac.netlify.app/
 
 In this Web site we have some Feature and functionality in below:
 
